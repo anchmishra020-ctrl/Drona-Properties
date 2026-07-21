@@ -279,7 +279,7 @@ export default function Login({ onLoginSuccess }: LoginProps) {
             </button>
           </div>
 
-          {/* Demo Credentials Box */}
+          {/* Demo Credentials Box
           {!isSignUp && (
             <div className="mt-6 p-4 bg-natural-panel rounded-xl border border-natural-border">
               <p className="text-xs font-bold text-natural-muted tracking-wide uppercase mb-1.5">
@@ -290,7 +290,7 @@ export default function Login({ onLoginSuccess }: LoginProps) {
                 <p>Password: <span className="font-semibold text-natural-title">admin123</span></p>
               </div>
             </div>
-          )}
+          )} */}
         </div>
       </motion.div>
     </div>
