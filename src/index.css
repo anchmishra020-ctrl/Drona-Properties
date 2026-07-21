@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+@import "tailwindcss";
+
+:root {
+  /* Default: Modern Premium Light Theme - Crisp slate background with beautiful ocean-teal and amber accents */
+  --natural-bg: #F8FAFC;
+  --natural-panel: #F1F5F9;
+  --natural-border: #E2E8F0;
+  --natural-card: #FFFFFF;
+  --natural-clay: #D97706;
+  --natural-sage: #0D9488;
+  --natural-sage-dark: #0F766E;
+  --natural-text: #334155;
+  --natural-title: #0F172A;
+  --natural-muted: #475569;
+  --natural-subtle: #94A3B8;
+}
+
+/* Theme 4: Charcoal Obsidian Premium Dark Mode */
+html[data-theme="theme-dark"] {
+  --natural-bg: #0B0F19;
+  --natural-panel: #161F30;
+  --natural-border: #232D3F;
+  --natural-card: #111827;
+  --natural-clay: #F59E0B;
+  --natural-sage: #0D9488;
+  --natural-sage-dark: #14B8A6;
+  --natural-text: #CBD5E1;
+  --natural-title: #F8FAFC;
+  --natural-muted: #94A3B8;
+  --natural-subtle: #475569;
+}
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Lora", Georgia, serif;
+  
+  --color-natural-bg: var(--natural-bg);
+  --color-natural-panel: var(--natural-panel);
+  --color-natural-border: var(--natural-border);
+  --color-natural-card: var(--natural-card);
+  --color-natural-clay: var(--natural-clay);
+  --color-natural-sage: var(--natural-sage);
+  --color-natural-sage-dark: var(--natural-sage-dark);
+  --color-natural-text: var(--natural-text);
+  --color-natural-title: var(--natural-title);
+  --color-natural-muted: var(--natural-muted);
+  --color-natural-subtle: var(--natural-subtle);
+}
+
+body {
+  background-color: var(--color-natural-bg);
+  color: var(--color-natural-text);
+  font-family: var(--font-sans);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Intelligent dual-theme helper overrides */
+html[data-theme="theme-dark"] .bg-white {
+  background-color: var(--natural-card) !important;
+}
+
+html[data-theme="theme-dark"] .bg-\[\#FAF8F5\] {
+  background-color: var(--natural-panel) !important;
+}
+
+html[data-theme="theme-dark"] .bg-\[\#F2EDE7\] {
+  background-color: var(--natural-panel) !important;
+}
+
+html[data-theme="theme-dark"] .text-white {
+  color: #ffffff !important;
+}
+
+html[data-theme="theme-dark"] ::placeholder {
+  color: #64748B !important;
+}
+
+/* Stagger transitions for responsive tactile elements */
+div, header, button, input, select, textarea, span, p, h1, h2, h3, h4, h5, h6, table, tr, td, th {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+

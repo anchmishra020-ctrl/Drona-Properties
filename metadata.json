@@ -1,0 +1,6 @@
+{
+  "name": "AcreBook Property Inventory",
+  "description": "A luxury, high-performance real estate portfolio and property inventory management system with live registry calculators, analytical reports, and dark mode.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
